@@ -5,8 +5,8 @@ $(document).ready(function(){
         exams=result.exams;
         // draw table
         for(i in exams){
-            startTime=new Date(exams[i].start).toLocaleTimeString();
-            endTime=new Date(exams[i].end).toLocaleTimeString();
+            startTime=new Date(exams[i].start).toLocaleTimeString().substring(0,5);
+            endTime=new Date(exams[i].end).toLocaleTimeString().substring(0,5);
             $("tbody").append("\
                 <tr class=\"subjectTime\"s>\
                     <td class=\"text-center\">"+exams[i].subject+"</td>\
