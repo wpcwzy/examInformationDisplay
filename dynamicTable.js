@@ -8,7 +8,7 @@ $(document).ready(function(){
             startTime=new Date(exams[i].start).toLocaleTimeString().substring(0,5);
             endTime=new Date(exams[i].end).toLocaleTimeString().substring(0,5);
             $("tbody").append("\
-                <tr class=\"subjectTime\"s>\
+                <tr class=\"subjectTime\">\
                     <td class=\"text-center\">"+exams[i].subject+"</td>\
                     <td class=\"text-center\">"+startTime+"~"+endTime+"</td>\
                 </tr>\
@@ -36,6 +36,7 @@ function updateTable(){
         if(ret==1)
             $(this).addClass("table-primary");
         else if(ret==2)
+            $(this).removeClass("table-primary");
             $(this).addClass("table-success");
     })
 }
